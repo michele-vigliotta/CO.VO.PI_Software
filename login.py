@@ -1,4 +1,3 @@
-
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import QDialog, QLabel, QLineEdit, QPushButton, QVBoxLayout, QMessageBox, QSizePolicy, QSpacerItem
 
@@ -7,7 +6,7 @@ class Login(QDialog):
     def __init__(self, parent=None):
         super(Login, self).__init__(parent)
 
-        self.setWindowTitle("Co.Vo.Pi Software")
+        self.setWindowTitle("CO.VO.PI Software")
         self.setStyleSheet('background-color:lightblue')
 
         self.setFixedWidth(223)
@@ -78,4 +77,5 @@ class Login(QDialog):
             self.accept()
         else:
             QMessageBox.warning(None,'Errore', 'Nome utente o password errata')
+
 
