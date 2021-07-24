@@ -37,7 +37,7 @@ class VistaGestionePesca(QWidget):
         label_trasp = QLabel()
         v_layout.addWidget(label_trasp)
 
-        v_layout.addWidget(self.get_generic_button("Notifica", self.go_notifica, "icone/notifica.png"))
+        v_layout.addWidget(self.get_generic_button("Lista Quote", self.go_notifica, "icone/lista.png"))
 
         v_layout.addStretch()
 
@@ -54,7 +54,7 @@ class VistaGestionePesca(QWidget):
         button.setFont(QFont('Times', 12))
         button.setStyleSheet('background-color:white;color:#ff8000')
         button.setIcon(QIcon(icona))
-        button.setIconSize(QSize(30, 30))
+        button.setIconSize(QSize(25, 25))
         button.clicked.connect(on_click)
         return button
 
@@ -97,6 +97,7 @@ class VistaGestionePesca(QWidget):
             return
         self.vista_notifica = VistaNotifica(self.testo_tot)
         self.vista_notifica.show()
+
 
 
 
