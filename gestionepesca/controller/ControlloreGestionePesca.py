@@ -12,5 +12,5 @@ class ControlloreGestionePesca():
         return self.model.get_barche_tot()
 
     def get_lista_barche(self):
-        return  self.model.get_lista_barche()
+        return  self.model.get_lista_barche() 
 
