@@ -1,0 +1,52 @@
+[
+  {
+    "targa": "SBT39",
+    "uscita": "05:03",
+    "ingresso": "12:37"
+  },
+  {
+    "targa": "SBT35",
+    "uscita": "05:12",
+    "ingresso": "12:43"
+  },
+  {
+    "targa": "SBT51",
+    "uscita": "05:31",
+    "ingresso": "12:49"
+  },
+  {
+    "targa": "SBT06",
+    "uscita": "06:01",
+    "ingresso": "12:51"
+  },
+  {
+    "targa": "SBT00",
+    "uscita": "05:47",
+    "ingresso": "12:43"
+  },
+  {
+    "targa": "SBT87",
+    "uscita": "05:07",
+    "ingresso": "12:29"
+  },
+  {
+    "targa": "SBT25",
+    "uscita": "05:39",
+    "ingresso": "12:50"
+  },
+  {
+    "targa": "SBT63",
+    "uscita": "06:13",
+    "ingresso": "12:41"
+  },
+  {
+    "targa": "SBT01",
+    "uscita": "05:51",
+    "ingresso": "12:46"
+  },
+  {
+    "targa": "SBT03",
+    "uscita": "05:28",
+    "ingresso": "12:56"
+  }
+]
