@@ -24,3 +24,4 @@ assicurarsi di:
 1. aver effettuato l'accesso col proprio numero sul sito  https://web.whatsapp.com/
 2. assicurarsi di far parte del gruppo Whatsapp Pescatori del CO.VO.PI. 
    Link di accesso al gruppo: https://chat.whatsapp.com/LS72HItDQxE09q7Qb49wZ2
+3. assicurarsi di disporre di una buona connessione internet
