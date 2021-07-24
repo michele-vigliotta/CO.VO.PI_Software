@@ -1,6 +1,6 @@
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QIcon
 from PyQt5.QtCore import QSize
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QListView, QVBoxLayout, QPushButton, QGridLayout, QLabel
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QListView, QVBoxLayout, QPushButton, QGridLayout, QLabel, QMessageBox
 
 from barca.views.VistaBarca import VistaBarca
 from listabarche.controller.ControlloreListaBarche import ControlloreListaBarche
@@ -49,10 +49,11 @@ class VistaListaBarche(QWidget):
         g_layout.addWidget(open_button, 1, 0)
 
         self.setLayout(g_layout)
-        self.resize(400, 300)
+        self.resize(400, 350)
         self.setWindowTitle('Gestione Barche')
         self.setStyleSheet('background-color:lightblue')
         self.setWindowIcon(QIcon('icone/gestionebarche.png'))
+
 
     def update_ui(self):
         self.listview_model = QStandardItemModel(self.list_view)
@@ -66,6 +67,7 @@ class VistaListaBarche(QWidget):
             self.listview_model.appendRow(item)
         self.list_view.setModel(self.listview_model)
 
+
     def show_selected_info(self):
         if(len(self.list_view.selectedIndexes()) > 0):
             selected = self.list_view.selectedIndexes()[0].row()
@@ -74,6 +76,10 @@ class VistaListaBarche(QWidget):
             self.vista_barca.show()
 
     def show_new_barca(self):
+        if len(self.controller.get_lista_barche()) == 10:
+            QMessageBox.critical(self, 'Errore', 'Numero massimo di barche già raggiunto(10).',
+                                 QMessageBox.Ok, QMessageBox.Ok)
+            return
         self.vista_inserisci_barca = VistaInserisciBarca(self.controller, self.update_ui)
         self.vista_inserisci_barca.show()
 
