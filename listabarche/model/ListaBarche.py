@@ -6,7 +6,7 @@ class ListaBarche():
     def __init__(self):
         super(ListaBarche, self).__init__()
         self.lista_barche = []
-        if os.path.isfile('listabarche/data/lista_barche_salvata.pickle'):                  #se c'e'¨, apro la lista creata in gestionebarche
+        if os.path.isfile('listabarche/data/lista_barche_salvata.pickle'):                  #se c'e', apro la lista creata in gestionebarche
             with open('listabarche/data/lista_barche_salvata.pickle', 'rb') as f:
                 self.lista_barche = pickle.load(f)
 
