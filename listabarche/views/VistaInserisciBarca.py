@@ -34,6 +34,8 @@ class VistaInserisciBarca(QWidget):
         self.setWindowTitle("Nuova Barca")
         self.setStyleSheet('background-color:lightblue')
         self.setWindowIcon(QIcon('icone/nuovo.png'))
+        self.setFixedWidth(250)
+
 
     def add_info_text(self, nome, label):
         text_label = QLabel(label)
@@ -48,19 +50,32 @@ class VistaInserisciBarca(QWidget):
         self.v_layout.addWidget(current_text)
 
     def add_barca(self):
+
+
         for value in self.qlines.values():
             if value.text() == "":
                 QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste.', QMessageBox.Ok, QMessageBox.Ok)
                 return
-        self.controller.aggiungi_barca(Barca(
-            self.qlines["nome"].text(),
-            self.qlines["targa"].text().upper(),
-            self.qlines["nomereferente"].text(),
-            self.qlines["cognomereferente"].text(),
-            self.qlines["cf"].text(),
-            self.qlines["telefono"].text(),
-            self.qlines["equipaggio"].text(),
-            self.qlines["licenza"].text())
+
+        for barca in self.controller.get_lista_barche():
+            if self.qlines["targa"].text().upper() == barca.targa:
+                QMessageBox.critical(self, 'Attenzione', 'La barca è già presente in lista.', QMessageBox.Ok, QMessageBox.Ok)
+                return
+
+        if (self.qlines["equipaggio"].text() != "2") and (self.qlines["equipaggio"].text() != "3"):
+            QMessageBox.critical(self, 'Errore', "Il numero di dipendenti (equipaggio) deve avere un valore tra 2 o 3.",
+                                     QMessageBox.Ok, QMessageBox.Ok)
+            return
+
+        self.controller.aggiungi_barca(Barca(          #controller: ControlloreListaBarche
+        self.qlines["nome"].text(),
+        self.qlines["targa"].text().upper(),
+        self.qlines["nomereferente"].text(),
+        self.qlines["cognomereferente"].text(),
+        self.qlines["cf"].text().upper(),
+        self.qlines["telefono"].text(),
+        self.qlines["equipaggio"].text(),
+        self.qlines["licenza"].text().upper())
         )
-        self.callback()
+        self.callback()                                #update_ui in VistaListaBarche
         self.close()
