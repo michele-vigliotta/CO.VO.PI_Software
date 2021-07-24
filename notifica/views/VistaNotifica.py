@@ -1,3 +1,4 @@
+from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QPushButton, QTextEdit, QMessageBox
 from notifica.controller.ControlloreNotifica import ControlloreNotifica
@@ -8,8 +9,6 @@ class VistaNotifica(QWidget):
         super(VistaNotifica, self).__init__()
 
         self.messaggio = messaggio
-
-        print(self.messaggio)
 
         self.controller = ControlloreNotifica()
 
@@ -31,6 +30,8 @@ class VistaNotifica(QWidget):
 
         invia_button = QPushButton("Invia")
         invia_button.clicked.connect(self.invia_messaggio)
+        invia_button.setIcon(QIcon('icone/notifica'))
+        invia_button.setIconSize(QSize(30, 30))
         invia_button.setStyleSheet('background-color:white;color:#ff8000')
         font_invia_button = invia_button.font()
         font_invia_button.setPointSize(12)
