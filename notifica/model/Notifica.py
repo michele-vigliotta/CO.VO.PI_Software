@@ -18,11 +18,17 @@ class Notifica():
         try:
 
             # parametri: id gruppo, messaggio, ora minuto
-            # invia messaggio su whatsapp web
+            # invia messaggio su whatsapp web all'ora corrente + 2 minuti
+            # dopo l'esecuzione attendere fino all'invio del messaggio
+
             pywhatkit.sendwhatmsg_to_group(self.id_gruppo, 'Quote Giornaliere:\n' + messaggio, now.hour, (now.minute + 2))
             print("invio riuscito!")
-            #time.sleep(20)
-            #os.system("taskkill /im brave.exe /f") #arresta un programma in base al nome. Es: per chrome: os.system("taskkill /im chrome.exe /f")
+            
+            
+            '''
+            Per automatizzare la chiusura del browser predefinito in seguito all'invio della notifica:
+            time.sleep(20)
+            os.system("taskkill /im brave.exe /f") #arresta un programma in base al nome. Es: per chrome: os.system("taskkill /im chrome.exe /f")'''
 
         except:
             print(("invio non riuscito!"))
