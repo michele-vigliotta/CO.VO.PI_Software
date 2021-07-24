@@ -1,0 +1,26 @@
+
+Librerie da installare:
+pywhatkit
+pyqt5
+requests
+
+-----------------------
+
+Credenziali Login:
+nome utente: admin
+password: password
+
+-----------------------
+
+Prima di visualizzare il meteo recarsi al sito  https://api.tutiempo.net/it/ 
+ed effetuare il login con le seguenti credenziali
+Email :  uusep@hi2.in
+Password : meteo
+
+-----------------------
+
+Prima di inviare la notifica nell'area gestione pesca
+assicurarsi di: 
+1. aver effettuato l'accesso col proprio numero sul sito  https://web.whatsapp.com/
+2. assicurarsi di far parte del gruppo Whatsapp Pescatori del CO.VO.PI. 
+   Link di accesso al gruppo: https://chat.whatsapp.com/LS72HItDQxE09q7Qb49wZ2
