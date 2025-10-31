@@ -19,6 +19,17 @@ Python Desktop application for <i>Consorzio Vongole del Piceno</i> to manage dai
 Before starting the software, please read the <code>guide.txt</code> file in the configuration folder.
 </p>
 
+<h2>Installation</h2>
+
+<ol>
+  <li>Clone the repo and open the project folder</li>
+  <li>Create a virtual environment and activate it</li>
+  <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+  <li>Read <code>guide.txt</code> inside the <code>configurazione/</code> folder</li>
+  <li>Run the app with: <code>python main.py</code></li>
+</ol>
+
+
 <h2>Features</h2>
 
   - <b>Fishing Management</b>: insert total requested sacks, automatic quota calculation, green/red fishing permission indicator, WhatsApp Web message automation
