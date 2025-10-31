@@ -16,7 +16,7 @@ Python Desktop application for <i>Consorzio Vongole del Piceno</i> to manage dai
   
 <h2>Warnings</h2>
 <p>
-Before starting the software, please read the <code>guide.txt</code> file in the configuration folder.
+Before starting the software, please read the <code>guide.txt</code> file in the <code>configurazione/</code> folder.
 </p>
 
 <h2>Installation</h2>
