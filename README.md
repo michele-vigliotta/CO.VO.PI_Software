@@ -10,6 +10,8 @@
 Python Desktop application for <i>Consorzio Vongole del Piceno</i> to manage daily clam-fishing operations, vessel tracking, and automated crew communication.
 </p>
 
+<hr>
+
 <p align="center">
 <img src="docs/main_view.png" width="500">
 </p>
@@ -67,5 +69,7 @@ Full technical documentation:
 * Filippo Montagnoli
 * Erika Pignotti
 
+<hr>
 
+<p align="center"><i>University project developed for the Software Engineering course.</i></p>
 
